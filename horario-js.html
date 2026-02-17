@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIU - Reporte Oficial de Horarios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body class="bg-light">
+
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">SIU-WEB</a>
+        <span class="navbar-text text-white">Sistemas de docentes</span>
+        <div class="ms-auto d-none d-md-block">
+          <small class="text-white-50 me-3">Usuario: A. Cisneros</small>
+          <small class="text-white-50">Período: 2026-I</small>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-4">
+      <h3 class="text-center text-danger fw-bold mb-4">REPORTE OFICIAL DE HORARIOS</h3>
+
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="btn-group" role="group" aria-label="Cambiar vista">
+          <button id="btnLista" type="button" class="btn btn-primary">Vista Lista</button>
+          <button id="btnCalendario" type="button" class="btn btn-outline-secondary">Vista Calendario</button>
+        </div>
+        <div class="d-flex gap-2">
+          <button type="button" class="btn btn-outline-primary">EXPORTAR A EXCEL</button>
+          <button type="button" class="btn btn-danger">CERRAR SESION</button>
+        </div>
+      </div>
+
+      <div id="vistaLista" class="table-responsive">
+        <table class="table table-striped table-hover table-sm align-middle mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th scope="col" class="text-uppercase small">Código</th>
+              <th scope="col" class="text-uppercase small">Asignatura</th>
+              <th scope="col" class="text-uppercase small text-center">Grupo</th>
+              <th scope="col" class="text-uppercase small text-center">Día</th>
+              <th scope="col" class="text-uppercase small text-center">Horario</th>
+              <th scope="col" class="text-uppercase small text-center">Aula</th>
+            </tr>
+          </thead>
+          <tbody id="datosHorario">
+            <tr>
+              <td class="text-center">0413</td>
+              <td class="fw-bold">PROGRAMACION WEB</td>
+              <td class="text-center"><span class="badge bg-secondary rounded-pill">Gpo1</span></td>
+              <td class="text-center">MARTES</td>
+              <td class="text-center">10:00 - 11:40</td>
+              <td class="text-center"><span class="badge text-bg-warning">E201</span></td>
+            </tr>
+            <tr>
+              <td class="text-center">0413</td>
+              <td class="fw-bold">PROGRAMACION WEB</td>
+              <td class="text-center"><span class="badge bg-secondary rounded-pill">Gpo1</span></td>
+              <td class="text-center">JUEVES</td>
+              <td class="text-center">15:00 - 16:40</td>
+              <td class="text-center"><span class="badge text-bg-warning">E201</span></td>
+            </tr>
+            <tr>
+              <td class="text-center">0402</td>
+              <td>INTRO. INGENIERIA</td>
+              <td class="text-center"><span class="badge bg-info text-dark rounded-pill">Gpo3</span></td>
+              <td class="text-center">LUNES</td>
+              <td class="text-center">08:00 - 09:40</td>
+              <td class="text-center"><span class="badge text-bg-light">D104</span></td>
+            </tr>
+            <tr>
+              <td class="text-center">0402</td>
+              <td>INTRO. INGENIERIA</td>
+              <td class="text-center"><span class="badge bg-info text-dark rounded-pill">Gpo3</span></td>
+              <td class="text-center">MIERCOLES</td>
+              <td class="text-center">08:00 - 09:40</td>
+              <td class="text-center"><span class="badge text-bg-light">D104</span></td>
+            </tr>
+            <tr>
+              <td class="text-center">0402</td>
+              <td>INTRO. INGENIERIA</td>
+              <td class="text-center"><span class="badge bg-success rounded-pill">Gpo4</span></td>
+              <td class="text-center">LUNES</td>
+              <td class="text-center">10:00 - 11:40</td>
+              <td class="text-center"><span class="badge text-bg-warning">E201</span></td>
+            </tr>
+            <tr>
+              <td class="text-center">0402</td>
+              <td>INTRO. INGENIERIA</td>
+              <td class="text-center"><span class="badge bg-success rounded-pill">Gpo4</span></td>
+              <td class="text-center">JUEVES</td>
+              <td class="text-center">08:00 - 09:40</td>
+              <td class="text-center"><span class="badge text-bg-warning">E201</span></td>
+            </tr>
+            <tr>
+              <td class="text-center">0402</td>
+              <td>INTRO. INGENIERIA</td>
+              <td class="text-center"><span class="badge bg-danger rounded-pill">Gpo7</span></td>
+              <td class="text-center">LUNES</td>
+              <td class="text-center">03:00 - 04:40</td>
+              <td class="text-center"><span class="badge text-bg-light">D104</span></td>
+            </tr>
+            <tr>
+              <td class="text-center">0402</td>
+              <td>INTRO. INGENIERIA</td>
+              <td class="text-center"><span class="badge bg-danger rounded-pill">Gpo7</span></td>
+              <td class="text-center">JUEVES</td>
+              <td class="text-center">01:00 - 02:40</td>
+              <td class="text-center"><span class="badge text-bg-light">D104</span></td>
+            </tr>
+            <tr>
+              <td class="text-center">0402</td>
+              <td>INTRO. INGENIERIA</td>
+              <td class="text-center"><span class="badge bg-primary rounded-pill">Gpo8</span></td>
+              <td class="text-center">MARTES</td>
+              <td class="text-center">03:00 - 04:40</td>
+              <td class="text-center"><span class="badge text-bg-light">D104</span></td>
+            </tr>
+            <tr>
+              <td class="text-center">0402</td>
+              <td>INTRO. INGENIERIA</td>
+              <td class="text-center"><span class="badge bg-primary rounded-pill">Gpo8</span></td>
+              <td class="text-center">MIERCOLES</td>
+              <td class="text-center">01:00 - 02:40</td>
+              <td class="text-center"><span class="badge text-bg-light">D104</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="vistaCalendario" class="d-none">
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle mb-0">
+            <thead>
+              <tr class="table-dark">
+                <th class="text-uppercase small">Hora</th>
+                <th class="text-uppercase small text-center">LUNES</th>
+                <th class="text-uppercase small text-center">MARTES</th>
+                <th class="text-uppercase small text-center">MIERCOLES</th>
+                <th class="text-uppercase small text-center">JUEVES</th>
+                <th class="text-uppercase small text-center">VIERNES</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoCalendario"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="text-center text-muted small py-4">Sistema de Gestión Académica - Derechos Reservados 1999-2005</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <script src="assets/js/horario.js"></script>
+    <script>
+      // Decorar los bloques generados en el calendario con clases Bootstrap según el grupo
+      document.addEventListener('DOMContentLoaded', () => {
+        const target = document.getElementById('cuerpoCalendario');
+        if (!target) return;
+
+        const aplicarEstilos = (root) => {
+          root.querySelectorAll('div.bg-clase').forEach(el => {
+            const texto = el.textContent || '';
+            // Clases base para el bloque evento
+            el.classList.add('rounded-3', 'px-2', 'py-1', 'text-center', 'small');
+
+            // Asignación por grupo usando solo utilidades Bootstrap
+            if (texto.includes('Gpo1')) {
+              el.classList.add('bg-secondary', 'text-white');
+            } else if (texto.includes('Gpo3')) {
+              el.classList.add('bg-info', 'text-dark');
+            } else if (texto.includes('Gpo4')) {
+              el.classList.add('bg-success', 'text-white');
+            } else if (texto.includes('Gpo7')) {
+              el.classList.add('bg-danger', 'text-white');
+            } else if (texto.includes('Gpo8')) {
+              el.classList.add('bg-primary', 'text-white');
+            } else {
+              el.classList.add('bg-light', 'text-dark');
+            }
+          });
+        };
+
+        // Observa cambios cuando se renderiza el calendario
+        const obs = new MutationObserver(muts => {
+          muts.forEach(m => m.addedNodes.forEach(n => {
+            if (n.nodeType === 1) aplicarEstilos(n);
+          }))
+        });
+        obs.observe(target, { childList: true, subtree: true });
+      });
+    </script>
+  </body>
+</html>
